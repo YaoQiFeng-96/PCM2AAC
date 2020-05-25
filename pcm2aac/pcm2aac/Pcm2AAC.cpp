@@ -170,7 +170,7 @@ bool CPcm2AAC::GetData(uint8_t *& pData, int * iSize)
 	int ret = avcodec_receive_packet(m_codecCtx, m_packet);
 	if (ret < 0)
 	{
-		fprintf(stderr, "avcodec_receive_packet() error. \n");
+		//fprintf(stderr, "avcodec_receive_packet() error. \n");
 		return false;
 	}
 	AddADTS(m_packet->size + 7);
